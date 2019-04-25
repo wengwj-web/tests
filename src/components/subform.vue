@@ -46,6 +46,39 @@ export default {
       }
     };
   },
+  computed:{
+    newValue(){
+      return this.formDynamic.items[0].value
+    }
+  },
+  watch: {
+    // index(o,n){
+    //   console.log(o,n)
+    // },
+
+    // newValue(val,oval){
+    //   console.log(val,oval)
+    // }
+    
+    // 监听对象所有属性
+    // formDynamic:{
+    //   handler(val,oldval){
+    //     console.log(val,oldval)
+    //   },
+    //   deep:true
+    // },
+    
+    // 只监听对象某个属性
+    // 'formDynamic.items':function(val,oldval){
+    //   console.log(val,oldval)
+    // }
+    index:{
+      handler(val,oldval){
+        console.log(val,oldval)
+      },
+      immediate: false //是否在一绑定就监听
+    }
+  },
   methods: {
     handleSubmit(name) {
       this.$refs[name].validate(valid => {
