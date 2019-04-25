@@ -82,5 +82,10 @@ export default new Router({
       name: 'date',
       component: () => import('@/components/date.vue')
     },
+    {
+      path: '/subform',
+      name: 'subform',
+      component: () => import('@/components/subform.vue')
+    },
   ]
 })
