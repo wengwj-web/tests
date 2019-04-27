@@ -13,6 +13,11 @@ export default new Router({
       component: HelloWorld
     },
     {
+      path: '/login',
+      name: 'login',
+      component: () =>import('@/components/login.vue')
+    },
+    {
       path: '/grid',
       name: 'grid',
       component: () => import('@/components/grid.vue')
@@ -86,6 +91,16 @@ export default new Router({
       path: '/subform',
       name: 'subform',
       component: () => import('@/components/subform.vue')
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: () => import('@/components/test.vue')
+    },
+    {
+      path: '/draggable',
+      name: 'draggable',
+      component: () => import('@/components/draggable.vue')
     },
   ]
 })

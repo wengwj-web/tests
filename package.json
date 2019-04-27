@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "iview": "^3.3.0",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
     "vue": "^2.6.6",
     "vue-draggable": "^2.0.0",
     "vue-router": "^3.0.1",

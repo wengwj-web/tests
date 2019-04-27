@@ -1,11 +1,22 @@
 <template>
-  <Table :columns="columns1" :data="data1"></Table>
+  <div>
+    <Table border ref="selection" :columns="columns4" :data="data1"></Table>
+    <Button @click="handleSelectAll(true)">Set all selected</Button>
+    <Button @click="handleSelectAll(false)">Cancel all selected</Button>
+  </div>
 </template>
 <script>
 export default {
   data() {
     return {
-      columns1: [
+      columns4: [
+        {
+          type: "index",
+          width: 60,
+          align: "center",
+          key: "index",
+          title: '序号'
+        },
         {
           title: "Name",
           key: "name"
@@ -46,6 +57,11 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    handleSelectAll(status) {
+      this.$refs.selection.selectAll(status);
+    }
   }
 };
 </script>
